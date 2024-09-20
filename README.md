@@ -38,21 +38,4 @@ To run the experiments, follow these steps:
    python run_experiments.py
    ```
 
----
-
-## Citation
-
-If you find this work useful for your research, please consider citing us:
-
-```bibtex
-@article{
-    anonymous2024graph,
-    title={Graph Cuts with Arbitrary Size Constraints Through Optimal Transport},
-    author={Anonymous},
-    journal={Submitted to Transactions on Machine Learning Research},
-    year={2024},
-    url={https://openreview.net/forum?id=UG7rtrsuaT},
-    note={Under review}
-}
-```
 
