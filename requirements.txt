@@ -1,0 +1,5 @@
+torchvision
+numpy
+scipy
+scikit-learn
+POT

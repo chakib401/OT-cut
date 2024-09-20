@@ -21,22 +21,6 @@ def CA(y_true, y_pred):
     return np.trace(conf_mat) / np.sum(conf_mat)
 
 
-def CF1(y_true, y_pred, **kwargs):
-    def cmat_to_psuedo_y_true_and_y_pred(cmat):
-        y_true = []
-        y_pred = []
-        for true_class, row in enumerate(cmat):
-            for pred_class, elm in enumerate(row):
-                y_true.extend([true_class] * elm)
-                y_pred.extend([pred_class] * elm)
-        return y_true, y_pred
-
-    conf_mat = ordered_confusion_matrix(y_true, y_pred)
-    pseudo_y_true, pseudo_y_pred = cmat_to_psuedo_y_true_and_y_pred(conf_mat)
-    return metrics.f1_score(pseudo_y_true, pseudo_y_pred, average='macro',
-                            **kwargs)
-
-
 # create graphs on image datasets
 def acm():
     dataset = "data/ACM"
